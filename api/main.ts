@@ -8,6 +8,5 @@ export default async function vercelHandler(
   req: VercelRequest,
   res: VercelResponse
 ) {
-  console.log("Incoming request to webhook!");
   return handler(req, res);
 }
