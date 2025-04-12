@@ -1,8 +1,8 @@
 <p align="center">
-  <a href="" target="blank"><img src="./assets/telechat-logo.png" width="200" alt="Telechat Logo" /></a>
+  <a href="" target="blank"><img src="./assets/telescope-logo.png" width="200" alt="Telescope Logo" /></a>
 </p>
 
-# Telechat
+# Telescope — see your chat info. In detail.
 
 This bot is designed to return basic information about a chat. It is primarily used by engineers to easily retrieve chat details such as the chat ID and type, which can be useful for sending notifications in CI/CD systems, monitoring, alerts, and more.
 
@@ -22,11 +22,11 @@ The bot will return the following information:
 
 ## How to Use
 
-Simply start the bot by sending any message. The bot will respond with the chat details and some information about itself.
+Simply start the bot by sending ["/start", "/show"] message. The bot will respond with the chat details and some information about itself.
 
 Example of usage:
 
-1. Start a conversation with the bot - [t.me/aboutchat_bot](https://t.me/aboutchat_bot). 
+1. Start a conversation with the bot - [telescope bot](https://t.me/tele_scope_bot). 
 2. The bot will send a message with your chat ID and other details.
 3. Use the information for CI/CD notifications or monitoring purposes.
 
