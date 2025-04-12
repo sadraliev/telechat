@@ -1,5 +1,8 @@
+<p align="center">
+  <a href="" target="blank"><img src="./assets/telechat-logo.png" width="200" alt="Telechat Logo" /></a>
+</p>
 
-# TeleChat - Telegram Chat Information Bot
+# Telechat - Telegram Chat Information Bot
 
 This bot is designed to return basic information about a chat. It is primarily used by engineers to easily retrieve chat details such as the chat ID and type, which can be useful for sending notifications in CI/CD systems, monitoring, alerts, and more.
 
