@@ -3,13 +3,10 @@ import { Chat } from "grammy/types";
 export function renderChatInfo(chat: Chat, threadId?: number): string {
   const lines: string[] = [];
 
-  lines.push(`<b>👋 Welcome!</b>`);
+  lines.push(`<b>📦 Current Chat Details</b>`);
   lines.push(
-    `This bot provides basic information about the current Telegram chat — helpful when you need to set up alerts, notifications, or integrations for CI/CD, monitoring, and more.`
+    `Here is the technical info about this chat — useful for setting up bots, automations, or integrations:`
   );
-
-  lines.push("\n");
-  lines.push(`<b>🔍 Chat Info</b>`);
 
   const chatInfoDict: Record<string, any> = {
     id: chat.id,
@@ -30,13 +27,36 @@ export function renderChatInfo(chat: Chat, threadId?: number): string {
     )}</code></pre>`
   );
 
-  lines.push("\n");
   lines.push("— — —");
-  lines.push(`<u>No user data is stored.</u>`);
+  lines.push(`🔐 <i>We don’t store any user data.</i>`);
   lines.push(
-    `Code on <a href="https://github.com/your-repo-url">GitHub</a>, hosted via <a href="https://vercel.com/docs/functions">Vercel Functions</a>.`
+    `🛠 <a href="https://github.com/sadraliev/telescope">GitHub repo</a> · <a href="https://vercel.com/docs/functions">Hosted on Vercel</a>`
   );
-  lines.push(`Want to contribute? You're very welcome!`);
 
   return lines.join("\n");
+}
+
+export function renderStartMessage(): string {
+  const message = [];
+  message.push(
+    "👋 <b>Hello!</b> I'm <b>Telescope</b> — your chat information assistant."
+  );
+  message.push(
+    "🔍 I help you retrieve basic details about your chat, such as the chat <b>ID</b> and <b>type</b>."
+  );
+  message.push("\n<b>Here are the commands you can use:</b>");
+  message.push("• <b>/start</b> — Get a greeting and information about me.");
+  message.push(
+    "• <b>/show</b> — Get details about the current chat (ID, type, title, etc)."
+  );
+  message.push(
+    "\n🛠 You can use me for <b>CI/CD notifications</b>, <b>monitoring</b>, <b>alerts</b>, and more."
+  );
+  message.push("🔒 <b>I don’t store any user data!</b>");
+  message.push(
+    '💻 You can check out the source code on <a href="https://github.com/sadraliev/telescope">GitHub</a>.'
+  );
+  message.push("\nLet me know how I can assist you! 😊");
+
+  return message.join("\n");
 }

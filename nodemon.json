@@ -2,5 +2,5 @@
   "watch": ["bot"],
   "ext": ".ts,.js",
   "ignore": ["node_modules", "build"],
-  "exec": "ts-node ./bot/bot.ts"
+  "exec": "ts-node ./bot/local.ts"
 }

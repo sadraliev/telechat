@@ -1,22 +1,29 @@
 import { Bot, GrammyError, HttpError } from "grammy";
 import { getBotToken } from "./config";
-import { renderChatInfo } from "./handlers";
+import { renderChatInfo, renderStartMessage } from "./handlers";
 
 const bot = new Bot(getBotToken());
 
 bot.command("start", (ctx) => {
-  const messageId = ctx.message?.message_thread_id;
-  const message = renderChatInfo(ctx.chat, messageId);
+  const message = renderStartMessage();
+
   bot.api.sendMessage(ctx.chat.id, message, {
     parse_mode: "HTML",
+    link_preview_options: {
+      is_disabled: true,
+    },
   });
 });
 
-bot.on("message", (ctx) => {
+bot.command("show", (ctx) => {
   const messageId = ctx.message?.message_thread_id;
   const message = renderChatInfo(ctx.chat, messageId);
+
   bot.api.sendMessage(ctx.chat.id, message, {
     parse_mode: "HTML",
+    link_preview_options: {
+      is_disabled: true,
+    },
   });
 });
 
