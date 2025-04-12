@@ -4,6 +4,11 @@ import { renderChatInfo } from "./handlers";
 
 const bot = new Bot(getBotToken());
 
+bot.use((ctx, next) => {
+  console.log("webhook check", ctx.update);
+  return next();
+});
+
 bot.command("start", (ctx) => {
   const messageId = ctx.message?.message_thread_id;
   const message = renderChatInfo(ctx.chat, messageId);
