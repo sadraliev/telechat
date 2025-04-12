@@ -1,6 +1,6 @@
 {
-  "watch": ["api"],
+  "watch": ["bot"],
   "ext": ".ts,.js",
   "ignore": ["node_modules", "build"],
-  "exec": "ts-node ./api/local.ts"
+  "exec": "ts-node ./bot/bot.ts"
 }
