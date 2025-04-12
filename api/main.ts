@@ -5,4 +5,5 @@ export const config = {
     bodyParser: false,
   },
 };
+console.log("Webhook function has been invoked");
 export default webhookCallback(bot, "https");
