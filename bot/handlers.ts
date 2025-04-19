@@ -30,8 +30,12 @@ export function renderChatInfo(chat: Chat, threadId?: number): string {
   lines.push("— — —");
   lines.push(`🔐 <i>We don’t store any user data.</i>`);
   lines.push(
-    `🛠 <a href="https://github.com/sadraliev/telescope">GitHub repo</a> · <a href="https://vercel.com/docs/functions">Hosted on Vercel</a>`
+    `🛠 <a href="https://github.com/sadraliev/telescope">Source on GitHub</a>`
   );
+  lines.push(
+    `<a href="https://vercel.com/docs/functions">🚀 Hosted on Vercel</a>`
+  );
+  lines.push(`<a href="https://grammy.dev">🤖 Built with grammY</a>`);
 
   return lines.join("\n");
 }
@@ -52,7 +56,6 @@ export function renderStartMessage(): string {
   message.push(
     "\n🛠 You can use me for <b>CI/CD notifications</b>, <b>monitoring</b>, <b>alerts</b>, and more."
   );
-  message.push("🔒 <b>I don’t store any user data!</b>");
   message.push(
     '💻 You can check out the source code on <a href="https://github.com/sadraliev/telescope">GitHub</a>.'
   );
